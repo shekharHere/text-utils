@@ -3,7 +3,7 @@ import React from 'react';
 function Partners(props) {
 
     const detailStyle = {
-        width: "1000px",
+        width: "100%",
         float: "right"
     }
 

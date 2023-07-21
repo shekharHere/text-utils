@@ -3,7 +3,7 @@ import React from 'react';
 function OurJourney(props) {
 
     const detailStyle = {
-        width: "900px",
+        width: "100%",
         float: "right",
         backgroundColor: (props.mode === 'light') ? 'white' : '#6c757d',
         color: (props.mode === 'light') ? 'black' : 'white'

@@ -15,18 +15,21 @@ function TextForm(props) {
     }
 
     const wordCount = (word) => {
-        let count = 0;
-        if (word === "") {
-            return count = 0;
-        } else {    
-            let txt = word.split(/[ ]+/).join(" ");
-            count = txt.split(" ").length;
-            return count;
-        }
+        // let count = 0;
+        // if (word === "") {
+        //     return count = 0;
+        // } else {    
+        //     let txt = word.split(/[ ]+/).join(" ");
+        //     count = txt.split(" ").length;
+        //     return count;
+        // }
+        return word.split(/\s+/).filter((ele)=>{return ele.length !== 0}).length;
     }
 
     const onChangeHandle = (e) => {
         setText(e.target.value);
+        // let showEle = document.getElementsByClassName('summary-show');
+        // showEle.classList.remove('d-none');
     }
 
     const toUpCaseHandle = () => {
@@ -57,6 +60,7 @@ function TextForm(props) {
         let copiedText = document.getElementById("textArea");
         copiedText.select();
         navigator.clipboard.writeText(copiedText.value);
+        document.getSelection().removeAllRanges();
         props.showAlert("Copied to Clipboard!");
         setCopyText("Copied");
 
@@ -77,7 +81,7 @@ function TextForm(props) {
     }
 
     return (
-        <div className='container'>
+        <div className='container mt-4'>
             {/* <div className="mb-3">
                 <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
             </div> */}

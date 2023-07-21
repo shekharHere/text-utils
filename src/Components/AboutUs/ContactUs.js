@@ -3,7 +3,7 @@ import React from 'react';
 function ContactUs(props) {
 
     const detailStyle = {
-        width: "900px",
+        width: "100%",
         float: "right"
     }
 

@@ -43,7 +43,7 @@ function About(props) {
 
   return (
     <>
-    <div className='container my-4 d-flex'>
+    <div className='container my-4 d-flex pt-4'>
         <div className="card me-2" style={navigateStyle}>
             <div className="card-header">
                 Featured
@@ -54,21 +54,18 @@ function About(props) {
                 <li className="list-group-item" type="button" onClick={toggleSection3} style={modeColor}>Contact Us</li>
             </ul>
         </div>
-            {/* <Routes>
-                <Route path='/our-journey' element={<OurJourney/>}></Route>
-            </Routes> */}
             <div>
-                <div className={`collapse ${section1}`}>
+                <div className={`collapse ${section1}`} style={{width:'65vw'}}>
                     <OurJourney mode={props.mode}/>
                 </div>
             </div>
             <div>
-                <div className={`collapse ${section2}`}>
+                <div className={`collapse ${section2}`} style={{width:'65vw'}}>
                     <Partners mode={props.mode}/>
                 </div>
             </div>
             <div>
-                <div className={`collapse ${section3}`}>
+                <div className={`collapse ${section3}`} style={{width:'65vw'}}>
                     <ContactUs mode={props.mode}/>
                 </div>
             </div>
